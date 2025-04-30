@@ -1,8 +1,9 @@
 import './App.css'
+import EmployeeCompnent from './components/EmployeeCompnent'
 import FooterComponents from './components/FooterComponents'
 import HeaderComponents from './components/HeaderComponents'
 import ListEmployeeComponent from './components/ListEmployeeComponent'
-import {BrowserRouter, Routes,Route} from 'react-router-dom'
+import {BrowserRouter,Navigate, Routes,Route} from 'react-router-dom'
 
 function App(){
   return(
@@ -11,8 +12,11 @@ function App(){
         <HeaderComponents/>
 
         <Routes>
-          <Route path='/' element={<ListEmployeeComponent/>}></Route>
-          <Route path=''></Route>
+          <Route path="/" element={<Navigate to="/employees" />} />
+
+          <Route path='/employees' element={<ListEmployeeComponent/>}></Route>
+
+          <Route path='/add-employee' element={<EmployeeCompnent/>}></Route>
         </Routes>
         
         <FooterComponents/>
