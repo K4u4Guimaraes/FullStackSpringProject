@@ -31,9 +31,8 @@ const ListEmployeeComponent = () => {
 
      function removeEmployee(id){
         console.log(id)
-        getAllEmployees()
         deleteEmployee(id).then((response) => {
-
+            getAllEmployees()
         }).catch(error => {
             console.error(error)
         })

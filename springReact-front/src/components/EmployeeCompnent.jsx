@@ -58,9 +58,9 @@ const EmployeeCompnent = () => {
 
         function pageTitles(){
             if(id){
-                return <h2 className='texe-cente'>Update Employee</h2>
+                return <h2 className='text-center'>Update Employee</h2>
             }else{
-                <h2 className='texe-cente'>Add New Employee</h2>
+                return <h2 className='text-center'>Add New Employee</h2>
             }
         }
 
@@ -100,7 +100,6 @@ const EmployeeCompnent = () => {
                 {pageTitles()}
                 <div className='card-body'>
                     <form action="">
-
                         <div className='form-group mb-2'>
                             <label htmlFor="inameEmp" className='form-label'>First Name:</label>
                             <input type="text" 
